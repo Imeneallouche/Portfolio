@@ -1,7 +1,7 @@
 <h1 align='center'>✨ My portfolio ✨</h1>
 <hr>
 
-<p align='center'> this is my portfolio that is still in work (loading ...) </p>
+<p align='center'> this is my portfolio that is still on work (loading ...) </p>
 <br><br><br>
 
 <h1 align='center'>✨ Home Page ✨</h1><br>
