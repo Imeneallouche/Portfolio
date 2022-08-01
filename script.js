@@ -19,7 +19,7 @@ let CodeToAbout = document.querySelector(".Home header aside div");
 CodeToAbout.addEventListener("click", () => ScrollWithoutHref("About"));
 
 let CodeToSkills = document.querySelector(".Home header aside .second");
-CodeToSkills.addEventListener("click", () => ScrollWithoutHref("About"));
+CodeToSkills.addEventListener("click", () => ScrollWithoutHref("Works"));
 /*
 
 
@@ -50,3 +50,33 @@ function ScrollWithoutHref(classToScrollTo) {
     behavior: "smooth",
   });
 }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+refreshing page redirection to home page*/
+function checkRefresh() {
+  if (document.refreshForm.visited.value == "") {
+    // This is a fresh page load
+    document.refreshForm.visited.value = "1";
+    document.querySelector(`.Home`).scrollIntoView({
+      behavior: "smooth",
+    });
+  } else {
+    document.querySelector(`.Home`).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+}
+checkRefresh();
