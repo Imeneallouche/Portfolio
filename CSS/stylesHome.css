@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: sans-serif;
-  margin: 0px;
+  margin: 1px;
   background-color: #0c1113;
 }
 .Home {
@@ -71,7 +71,7 @@ the center ones*/
 .nav-propositions {
   width: 50%;
   max-width: 800px;
-  min-width: 500px;
+  /*min-width: 500px;*/
   display: flex;
   justify-content: center;
 }
@@ -304,6 +304,9 @@ code colors*/
 
 RESPONSIIIIIIIVE*/
 @media all and (max-width: 875px) {
+  .nav-propositions {
+    flex: 1;
+  }
   .nav-social {
     display: none;
   }
@@ -324,7 +327,7 @@ RESPONSIIIIIIIVE*/
     left: 0;
   }
 }
-@media all and (max-width: 580px) {
+@media all and (max-width: 500px) {
   .nav-toggler {
     display: block;
   }
