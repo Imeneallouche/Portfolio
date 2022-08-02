@@ -31,15 +31,14 @@ body {
 
 
   NAV BAR*/
-.Home nav {
+nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
   align-items: center;
 }
-
-.Home nav * * a {
+nav * * a {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 100;
   letter-spacing: 2px;
@@ -51,7 +50,7 @@ body {
   transition: all 0.5s;
 }
 
-.Home nav * * a:hover {
+nav * * a:hover {
   color: #25f662;
   font-size: 1.2rem;
 }
@@ -69,10 +68,10 @@ body {
 
 
 the center ones*/
-.Home nav .nav-propositions {
+.nav-propositions {
   width: 50%;
   max-width: 800px;
-  min-width: 560px;
+  min-width: 500px;
   display: flex;
   justify-content: center;
 }
@@ -84,7 +83,7 @@ the center ones*/
 
 
 the right ones*/
-.Home nav .nav-social {
+.nav-social {
   width: 15%;
   display: flex;
 }
@@ -95,20 +94,73 @@ the right ones*/
 
 
 the logo (left one)*/
-.Home nav img {
+nav img {
   height: 50px;
   width: 50px;
 }
 
-.Home nav li {
+nav li {
   flex: 3 auto;
 }
 
-.Home nav .social {
+.social {
   flex: 1 auto;
 }
 
 /*
+
+
+
+
+
+
+
+
+
+
+nav toggler*/
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/*
+
+
+
+
+
+
 
 
 
@@ -125,10 +177,11 @@ the logo (left one)*/
 
 
 HEADER*/
-.Home header {
+header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   position: relative;
   top: 20px;
 }
@@ -139,10 +192,11 @@ HEADER*/
 
 
 image on the lfet*/
-.Home header img {
-  width: 35%;
+header img {
+  width: 50%;
+  max-width: 540px;
   height: fit-content;
-  border-radius: 50%;
+  border-radius: 48%;
 }
 
 /*
@@ -152,24 +206,24 @@ image on the lfet*/
 
 
 what is on the right*/
-.Home header aside {
-  width: 40%;
+header aside {
+  width: 48%;
 }
 
-.Home header aside h1 {
+header aside h1 {
   color: #25f662;
   margin: 0;
   font-size: 5rem;
 }
 
-.Home header aside h2 {
+header aside h2 {
   color: rgb(109, 215, 253);
   font-weight: lighter;
   letter-spacing: 2px;
   margin: 0;
 }
 
-.Home header aside pre span {
+header aside pre span {
   padding: 15px 0;
 }
 
@@ -182,8 +236,9 @@ what is on the right*/
 
 
 code*/
-.Home header aside div {
+header aside div {
   width: 65%;
+  min-width: 360px;
   border-radius: 1%;
   padding: 30px 20px;
   letter-spacing: 2px;
@@ -195,14 +250,14 @@ code*/
   margin: 20px 0;
 }
 
-.Home header aside div:hover {
+header aside div:hover {
   box-shadow: rgba(240, 46, 170, 0.4) 4.5px 4.5px,
     rgba(240, 46, 170, 0.2) 9px 9px, rgba(240, 46, 170, 0.1) 13.5px 13.5px,
     rgba(240, 46, 170, 0.05) 18px 18px;
   cursor: pointer;
 }
 
-.Home header aside .second {
+header aside .second {
   position: relative;
   left: 15%;
 }
@@ -213,15 +268,95 @@ code*/
 
 
 code colors*/
-.Home header aside div .dictionary {
+.dictionary {
   color: rgb(255, 87, 210);
 }
-.Home header aside div .key {
+.key {
   color: #fff;
 }
-.Home header aside div .value {
+.value {
   color: rgb(109, 215, 253);
 }
-.Home header aside div .comment {
+.comment {
   color: #aaa;
+}
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESPONSIIIIIIIVE*/
+@media all and (max-width: 875px) {
+  .nav-social {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header aside .second {
+    position: relative;
+    left: 0;
+  }
+}
+@media all and (max-width: 580px) {
+  .nav-toggler {
+    display: block;
+  }
+  .nav-propositions {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 39px);
+    width: 100%;
+    top: 39px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  nav .nav-propositions li {
+    text-align: center;
+  }
+  nav .nav-propositions li a {
+    padding: 25px;
+  }
+  /*nav .nav-propositions li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }*/
+  nav .nav-propositions.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  .site-navbar .nav-propositions li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
