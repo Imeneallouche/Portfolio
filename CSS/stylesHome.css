@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: calc(9px + 0.3vw);
   scroll-behavior: smooth;
 }
 *,
@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: sans-serif;
-  margin: 1px;
+  margin: 0px;
   background-color: #0c1113;
 }
 .Home {
@@ -31,6 +31,9 @@ body {
 
 
   NAV BAR*/
+li {
+  list-style: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -193,10 +196,10 @@ header {
 
 image on the lfet*/
 header img {
-  width: 50%;
+  width: 44%;
   max-width: 540px;
   height: fit-content;
-  border-radius: 48%;
+  border-radius: 50%;
 }
 
 /*
@@ -207,13 +210,13 @@ header img {
 
 what is on the right*/
 header aside {
-  width: 48%;
+  width: 50%;
 }
 
 header aside h1 {
   color: #25f662;
   margin: 0;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 header aside h2 {
@@ -223,9 +226,9 @@ header aside h2 {
   margin: 0;
 }
 
-header aside pre span {
+/*header aside pre span {
   padding: 15px 0;
-}
+}*/
 
 /*
 
@@ -237,11 +240,10 @@ header aside pre span {
 
 code*/
 header aside div {
-  width: 65%;
-  min-width: 360px;
+  width: 75%;
   border-radius: 1%;
   padding: 30px 20px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   background-color: rgba(53, 81, 146, 0.4);
   box-shadow: rgba(53, 81, 146, 0.6) 0px 30px 60px -30px,
     rgba(53, 81, 146, 0.7) 0px 50px 100px -20px;
@@ -316,7 +318,7 @@ RESPONSIIIIIIIVE*/
     justify-content: center;
   }
   header aside {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -327,9 +329,14 @@ RESPONSIIIIIIIVE*/
     left: 0;
   }
 }
+
 @media all and (max-width: 500px) {
   .nav-toggler {
     display: block;
+  }
+
+  header aside {
+    width: 100%;
   }
   .nav-propositions {
     position: absolute;
