@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: calc(9px + 0.3vw);
+  font-size: calc(10px + 0.3vw);
   scroll-behavior: smooth;
 }
 *,
@@ -16,13 +16,7 @@ body {
 .Home {
   min-height: 100vh;
 }
-
 /*
-
-
-
-
-
 
 
 
@@ -52,35 +46,33 @@ nav * * a {
   text-align: center;
   transition: all 0.5s;
 }
-
 nav * * a:hover {
   color: #25f662;
   font-size: 1.2rem;
 }
-
 .Home hr {
   height: 0.1px;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   margin: 0;
 }
-
 /*
-
 
 
 
 the center ones*/
 .nav-propositions {
-  width: 50%;
-  max-width: 800px;
-  /*min-width: 500px;*/
+  width: 60%;
   display: flex;
   justify-content: center;
 }
-
+.nav-propositions li {
+  flex: 1;
+}
+.social li {
+  flex: 1;
+}
 /*
-
 
 
 
@@ -90,7 +82,6 @@ the right ones*/
   width: 15%;
   display: flex;
 }
-
 /*
 
 
@@ -101,19 +92,14 @@ nav img {
   height: 50px;
   width: 50px;
 }
-
 nav li {
   flex: 3 auto;
 }
-
 .social {
   flex: 1 auto;
 }
 
 /*
-
-
-
 
 
 
@@ -168,17 +154,6 @@ nav toggler*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 HEADER*/
 header {
   display: flex;
@@ -201,7 +176,6 @@ header img {
   height: fit-content;
   border-radius: 50%;
 }
-
 /*
 
 
@@ -226,12 +200,7 @@ header aside h2 {
   margin: 0;
 }
 
-/*header aside pre span {
-  padding: 15px 0;
-}*/
-
 /*
-
 
 
 
@@ -293,19 +262,8 @@ code colors*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 RESPONSIIIIIIIVE*/
-@media all and (max-width: 875px) {
+@media all and (max-width: 900px) {
   .nav-propositions {
     flex: 1;
   }
@@ -329,7 +287,11 @@ RESPONSIIIIIIIVE*/
     left: 0;
   }
 }
+/*
 
+
+
+*/
 @media all and (max-width: 500px) {
   .nav-toggler {
     display: block;
@@ -341,32 +303,32 @@ RESPONSIIIIIIIVE*/
   .nav-propositions {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 39px);
+    height: calc(100vh - 60px);
     width: 100%;
     top: 39px;
     flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.99);
     max-height: 0;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.5s;
+    z-index: 1;
   }
 
-  nav .nav-propositions li {
-    text-align: center;
+  .nav-propositions li {
+    width: 100%;
+    height: 100%;
   }
-  nav .nav-propositions li a {
+  .nav-propositions li a {
     padding: 25px;
+    width: 100%;
+    height: 100%;
   }
-  /*nav .nav-propositions li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }*/
   nav .nav-propositions.open {
     max-height: 100vh;
     overflow: visible;
   }
 
-  .site-navbar .nav-propositions li a:hover {
+  .nav-propositions li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
