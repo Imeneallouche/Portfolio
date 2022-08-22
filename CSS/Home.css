@@ -1,7 +1,8 @@
 html {
   box-sizing: border-box;
-  font-size: calc(10px + 0.3vw);
+  font-size: calc(11px + 0.3vw);
   scroll-behavior: smooth;
+  color: #ffffff;
 }
 *,
 *:before,
@@ -10,11 +11,8 @@ html {
 }
 body {
   font-family: sans-serif;
-  margin: 0px;
+  margin: 0 5px;
   background-color: #0c1113;
-}
-.Home {
-  min-height: 100vh;
 }
 /*
 
@@ -23,8 +21,7 @@ body {
 
 
 
-
-  NAV BAR*/
+NAV BAR*/
 li {
   list-style: none;
 }
@@ -65,6 +62,7 @@ the center ones*/
   width: 60%;
   display: flex;
   justify-content: center;
+  padding: 0px;
 }
 .nav-propositions li {
   flex: 1;
@@ -74,17 +72,13 @@ the center ones*/
 }
 /*
 
-
-
-
 the right ones*/
 .nav-social {
   width: 15%;
   display: flex;
+  padding: 0px;
 }
 /*
-
-
 
 
 the logo (left one)*/
@@ -100,8 +94,6 @@ nav li {
 }
 
 /*
-
-
 
 
 
@@ -150,10 +142,6 @@ nav toggler*/
 
 
 
-
-
-
-
 HEADER*/
 header {
   display: flex;
@@ -166,9 +154,6 @@ header {
 /*
 
 
-
-
-
 image on the lfet*/
 header img {
   width: 44%;
@@ -178,22 +163,12 @@ header img {
 }
 /*
 
-
-
-
-
 what is on the right*/
-header aside {
+.presentation {
   width: 50%;
 }
 
-header aside h1 {
-  color: #25f662;
-  margin: 0;
-  font-size: 3rem;
-}
-
-header aside h2 {
+.presentation h2 {
   color: rgb(109, 215, 253);
   font-weight: lighter;
   letter-spacing: 2px;
@@ -203,13 +178,9 @@ header aside h2 {
 /*
 
 
-
-
-
-
 code*/
-header aside div {
-  width: 75%;
+.code-wrapper {
+  width: 80%;
   border-radius: 1%;
   padding: 30px 20px;
   letter-spacing: 1px;
@@ -221,24 +192,20 @@ header aside div {
   margin: 20px 0;
 }
 
-header aside div:hover {
+.code-wrapper:hover {
   box-shadow: rgba(240, 46, 170, 0.4) 4.5px 4.5px,
     rgba(240, 46, 170, 0.2) 9px 9px, rgba(240, 46, 170, 0.1) 13.5px 13.5px,
     rgba(240, 46, 170, 0.05) 18px 18px;
   cursor: pointer;
+  transform: translateY(-0.25rem);
 }
 
-header aside .second {
+.presentation .concern {
   position: relative;
-  left: 15%;
+  left: 10%;
 }
 
-/*
-
-
-
-
-code colors*/
+/*code colors*/
 .dictionary {
   color: rgb(255, 87, 210);
 }
@@ -257,13 +224,8 @@ code colors*/
 
 
 
-
-
-
-
-
 RESPONSIIIIIIIVE*/
-@media all and (max-width: 900px) {
+@media all and (max-width: 1000px) {
   .nav-propositions {
     flex: 1;
   }
@@ -275,14 +237,17 @@ RESPONSIIIIIIIVE*/
     align-items: center;
     justify-content: center;
   }
-  header aside {
+  .presentation {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  header aside .second {
+  .code-wrapper {
+    width: 100%;
+  }
+  .presentation .concern {
     position: relative;
     left: 0;
   }
@@ -303,14 +268,14 @@ RESPONSIIIIIIIVE*/
   .nav-propositions {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 50px);
     width: 100%;
     top: 39px;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.99);
     max-height: 0;
     overflow: hidden;
-    transition: 0.5s;
+    transition: all 1s;
     z-index: 1;
   }
 

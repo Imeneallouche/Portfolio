@@ -41,12 +41,6 @@ function navLinkClick() {
 
 
 
-
-
-
-
-
-
 all links that got href in the nav bar( 5 links)*/
 let NavLinks = Array.from(document.querySelectorAll("a"));
 NavLinks = NavLinks.filter((link) => link.href.includes("#"));
@@ -64,10 +58,10 @@ NavLinks.forEach((link) => link.addEventListener("click", ScrollWithHref));
 
 
 other leaders to the scrolling*/
-let CodeToAbout = document.querySelector(".Home header aside div");
+let CodeToAbout = document.querySelector(".self-introduction");
 CodeToAbout.addEventListener("click", () => ScrollWithoutHref("About"));
 
-let CodeToSkills = document.querySelector(".Home header aside .second");
+let CodeToSkills = document.querySelector(".concern");
 CodeToSkills.addEventListener("click", () => ScrollWithoutHref("Works"));
 /*
 
@@ -114,18 +108,12 @@ function ScrollWithoutHref(classToScrollTo) {
 
 
 
-refreshing page redirection to home page*/
-function checkRefresh() {
-  if (document.refreshForm.visited.value == "") {
-    // This is a fresh page load
-    document.refreshForm.visited.value = "1";
-    document.querySelector(`.Home`).scrollIntoView({
-      behavior: "smooth",
-    });
-  } else {
-    document.querySelector(`.Home`).scrollIntoView({
-      behavior: "smooth",
-    });
-  }
+set the height of About => skills cirles to be as their width*/
+const allCircles = Array.from(document.querySelectorAll(".success"));
+window.addEventListener("resize", makeCircles);
+function makeCircles() {
+  allCircles.forEach(
+    (circle) => (circle.style.height = `${circle.offsetWidth}px`)
+  );
 }
-checkRefresh();
+makeCircles();
