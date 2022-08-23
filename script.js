@@ -82,7 +82,6 @@ Scrolling functions*/
 function ScrollWithHref(e) {
   e.preventDefault();
   const href = this.getAttribute("href").substring(1);
-  console.log(href);
 
   document.querySelector(`.${href}`).scrollIntoView({
     behavior: "smooth",
@@ -139,31 +138,35 @@ const numericalStats = Array.from(
   document.querySelectorAll("[data-statistics]")
 );
 
-window.addEventListener("scroll", debounce(animateStats, 20));
+window.addEventListener("wheel", debounce(animateStats, 20));
+
+window.addEventListener("click", animateStats);
 
 /*
 
 
 
 */
+let waitTillFinish = false;
 
-function animateStats(eventSelected) {
+function animateStats(eventSelected = null) {
   numericalStats.forEach((numericalStat) => {
-    // half way through the statistic
-    const slideInAt =
-      window.scrollY + window.innerHeight - numericalStat.height;
-    // bottom of the statistic
-    const statisticBottom = numericalStat.offsetTop + numericalStat.height;
-    const isHalfShown = slideInAt > numericalStat.offsetTop;
-    const isNotScrolledPast = window.scrollY < statisticBottom;
-    if (isHalfShown && isNotScrolledPast) {
-      console.log("go");
-      startcount();
+    const itemposition = numericalStat.getBoundingClientRect().top;
+    const fromTop = window.innerHeight >= itemposition;
+    const fromBottom = 0 < itemposition + numericalStat.offsetHeight;
+    if (fromTop && fromBottom) {
+      if (!waitTillFinish) {
+        waitTillFinish = true;
+        startcount();
+      }
     } else {
       setToZero();
+      waitTillFinish = false;
     }
   });
 }
+
+animateStats();
 
 function startcount() {
   const interval = setInterval(() => {
@@ -172,11 +175,9 @@ function startcount() {
       const finalCount = parseInt(stat.dataset.statistics);
       if (currentCount < finalCount) {
         stat.innerHTML = `${currentCount + 1}`;
-      } else {
-        falses++;
       }
     });
-  }, 200);
+  }, 100);
 }
 
 function setToZero() {
