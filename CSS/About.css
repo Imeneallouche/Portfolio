@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-around;
   padding: 0px;
-  margin: 4rem 3rem;
+  margin: 4rem 1.5rem;
 }
 .aboutme aside {
   width: 50%;
@@ -42,10 +42,12 @@
 }
 .stats .success {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  text-align: center;
   align-items: center;
+  flex-direction: column;
   color: #25f662;
-  flex: 1 1 20%;
+  width: 30%;
   border: 1px outset #25f662;
   border-width: 0.5px 1px 2px 3px;
   box-shadow: rgba(164, 251, 166, 0.4) -5px 5px,
@@ -68,6 +70,12 @@
     rgba(241, 227, 164, 0.3) -10px 10px, rgba(231, 205, 120, 0.2) -15px 15px,
     rgba(222, 182, 75, 0.1) -20px 20px, rgba(189, 155, 22, 0.05) -25px 25px;
 }
+.success h2 {
+  font-size: 3rem;
+}
+.success * {
+  margin: 0px;
+}
 /*
 
 
@@ -83,5 +91,8 @@
     align-items: center;
     width: 50%;
     order: -1;
+  }
+  .aboutme aside {
+    width: 100%;
   }
 }
