@@ -1,4 +1,3 @@
-console.log("eddoooooouuuu ah");
 /*Responsivity of the Nav Bar*/
 const navToggler = document.querySelector(".nav-toggler");
 const navMenu = document.querySelector("nav ul");
@@ -82,6 +81,7 @@ Scrolling functions*/
 function ScrollWithHref(e) {
   e.preventDefault();
   const href = this.getAttribute("href").substring(1);
+  console.log(href);
 
   document.querySelector(`.${href}`).scrollIntoView({
     behavior: "smooth",
