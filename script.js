@@ -138,7 +138,8 @@ const numericalStats = Array.from(
   document.querySelectorAll("[data-statistics]")
 );
 
-window.addEventListener("wheel", debounce(animateStats, 20));
+window.addEventListener("wheel", animateStats);
+window.addEventListener("scroll", animateStats);
 
 window.addEventListener("click", animateStats);
 
