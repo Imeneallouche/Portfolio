@@ -1,12 +1,19 @@
 <h1 align='center'>✨ My portfolio ✨</h1>
 <hr>
 
-<p align='center'> this is my portfolio that is still on work (loading ...) </p>
+<p> this is my portfolio that is still on work (loading ...)<br>
+it contains: <br>
+<ul>
+  <li><b>Home Page: </b>where you would find a small presentation about myself and also what I am up into in computer science in general (skills)</li>
+  <li><b>About Me Page:</b> where you would find a more detailed presentation about myself in addition the statistics I have come to until now</li>
+  <li><b>Skills:</b> where you would find all the technologies I work with so far</li>
+  <li><b>Worksc
+</p>
 <br><br><br>
 
 <h1 align='center'>✨ Home Page ✨<h1><br>
 
-![image](https://user-images.githubusercontent.com/89279264/182259166-de3beecf-d452-4f22-999f-03f547d2be95.png)
+![image](https://user-images.githubusercontent.com/89279264/190099809-1ab56530-57e5-437f-b123-9478c636799f.png)
 
 <br><br>
 
