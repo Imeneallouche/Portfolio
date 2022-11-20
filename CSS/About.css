@@ -1,15 +1,16 @@
-.About {
+.About,
+.Works {
   position: relative;
   top: 12rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
 }
 
 .Works {
-  position: relative;
-  top: 12rem;
+  top: 20rem;
 }
 .Title {
   font-size: 3rem;
