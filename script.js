@@ -111,7 +111,10 @@ function ScrollWithoutHref(classToScrollTo) {
 set the height of About => skills to be as their width to make squares*/
 //GOAL: make squares
 const allSquares = Array.from(document.querySelectorAll(".success"));
-window.addEventListener("resize", makeSquares);
+
+["resize", "load"].forEach((listener) =>
+  window.addEventListener(listener, makeSquares)
+);
 function makeSquares() {
   allSquares.forEach(
     (square) => (square.style.height = `${square.offsetWidth}px`)
