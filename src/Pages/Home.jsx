@@ -10,13 +10,13 @@ import Footer from "../Components/Footer";
 function Home() {
   return (
     <div className="bg-dark-grey w-screen flex flex-col">
-      <Header />
-      <About />
-      <Projects />
-      <Services />
-      <Testimonials />
-      <Contact />
-      <Footer/>
+      <Header id="Home" />
+      <About id="About" />
+      <Projects id="Projects" />
+      <Services id="Services" />
+      <Testimonials id="Testimonials" />
+      <Contact id="Contact" />
+      <Footer id="Hire me" />
     </div>
   );
 }

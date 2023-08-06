@@ -25,7 +25,9 @@ const OneProject = ({ ProjectIndex }) => {
         </h1>
       </div>
       <div className=" h-36 flex items-start">
-        <p className="px-5 text-light-grey">{ProjectsInfo[ProjectIndex].description} </p>
+        <p className="px-5 text-light-grey">
+          {ProjectsInfo[ProjectIndex].description}{" "}
+        </p>
       </div>
 
       <p className="text-light-brown font-semibold px-5 pb-2">technologies: </p>
@@ -39,7 +41,7 @@ const OneProject = ({ ProjectIndex }) => {
         ))}
       </div>
       <div className="flex justify-center my-5">
-        <button className="border px-12 py-5 text-red mr-5 border-red hover:text-brown hover:border-brown w-fit">
+        <button className="border px-12 py-5 text-light-brown mr-5 border-light-brown hover:text-brown hover:border-brown w-fit">
           learn more
         </button>
       </div>

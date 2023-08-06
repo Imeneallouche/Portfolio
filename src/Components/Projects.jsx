@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import OneProject from "./OneProject";
 import { ProjectsInfo } from "../Data/ProjectsInfo";
 
 function Projects() {
+  const containerRef = useRef();
+
+  const scrollContainer = (scrollOffset) => {
+    containerRef.current.scrollLeft += scrollOffset;
+  };
+
+  const SwipeRight = () => {
+    scrollContainer(-30); // Scroll left by 30 pixels
+  };
+
+  const SwipeLeft = () => {
+    scrollContainer(30); // Scroll right by 30 pixels
+  };
   return (
     <div className="bg-dark-grey w-screen">
       <div className="m-36">
@@ -11,16 +24,25 @@ function Projects() {
           My projects
         </h2>
         <div className="flex justify-end  ">
-          <button className="border border-light-brown px-7 py-4 hover:bg-light-brown">
+          <button
+            onClick={SwipeLeft}
+            className="border border-light-brown px-7 py-4 hover:bg-light-brown"
+          >
             {" "}
             {"<-"}{" "}
           </button>
-          <button className="border border-light-brown px-7 py-4 hover:bg-light-brown">
+          <button
+            onClick={SwipeRight}
+            className="border border-light-brown px-7 py-4 hover:bg-light-brown"
+          >
             {" "}
             {"->"}
           </button>
         </div>
-        <div className="scrollbar-hide mt-5 w-full overflow-x-auto flex space-x-5">
+        <div
+          ref={containerRef}
+          className="scrollbar-hide mt-5 w-full overflow-x-auto flex space-x-5"
+        >
           {ProjectsInfo.map((project, index) => (
             <OneProject key={index} ProjectIndex={index} />
           ))}

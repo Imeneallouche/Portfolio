@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { ContactInfo } from "../Data/Contact";
 import { AboutData } from "../Data/About";
-import axios from "axios";
+import emailjs from "emailjs-com";
+import { useToast } from "@chakra-ui/toast";
 
 function Footer() {
+  const toast = useToast();
+
   const [Email, setEmail] = useState("");
   const [Subject, setSubject] = useState("");
   const [Message, setMessage] = useState("");
@@ -14,8 +17,62 @@ function Footer() {
     { name: "Location", info: "Dar Djbel, Béjaia, Algeria" },
   ];
 
-  const handleSubmit = () => {
-    console.log("hehehe");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!Email || !Subject || !Message) {
+      toast({
+        title: "Please Fill all the fields",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      return;
+    }
+
+    // Your EmailJS configuration
+    const serviceID = "service_u3a7zkk";
+    const templateID = "template_ebx3xyv";
+    const userID = "7Bu73u8LAaNPG8oUG";
+
+    // Send the email using EmailJS API
+    emailjs
+      .send(
+        serviceID,
+        templateID,
+        {
+          to_email: "li_allouche@esi.dz",
+          from_email: Email,
+          subject: Subject,
+          message: Message,
+        },
+        userID
+      )
+      .then((response) => {
+        toast({
+          title: "Email sent successfully!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom",
+        });
+
+        // Clear form fields after successful submission
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => {
+        toast({
+          title: "Error Occured!",
+          description: "Check your network connection",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom",
+        });
+      });
   };
   return (
     <div className="bg-dark-grey w-screen">
@@ -36,6 +93,13 @@ function Footer() {
                 <p className="text-light-grey"> {contact.info} </p>
               </div>
             ))}
+            <div className="w-full flex justify-center">
+              <img
+                className="w-36"
+                src={require("../Assets/logo.png")}
+                alt="logo"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col space-y-5">
@@ -92,7 +156,7 @@ function Footer() {
                 id="floating_email"
                 className="block py-2.5 px-0 w-full text-sm text-grey bg-transparent border-0 border-b-2 border-light-grey appearance-none dark:text-white dark:border-grey dark:focus:border-light-brown focus:outline-none focus:ring-0 focus:border-light-brown peer"
                 placeholder=" "
-                required
+                //required
               />
               <label
                 for="floating_email"
@@ -112,7 +176,7 @@ function Footer() {
                 id="floating_subject"
                 className="block py-2.5 px-0 w-full text-sm text-grey bg-transparent border-0 border-b-2 border-light-grey appearance-none dark:text-white dark:border-grey dark:focus:border-light-brown focus:outline-none focus:ring-0 focus:border-light-brown peer"
                 placeholder=" "
-                required
+                //required
               />
               <label
                 for="floating_subject"
@@ -132,7 +196,7 @@ function Footer() {
                 id="floating_message"
                 className="block py-2.5 px-0 w-full text-sm text-grey bg-transparent border-0 border-b-2 border-light-grey appearance-none dark:text-white dark:border-grey dark:focus:border-light-brown focus:outline-none focus:ring-0 focus:border-light-brown peer"
                 placeholder=" "
-                required
+                //required
               />
               <label
                 for="floating_message"
