@@ -2,9 +2,27 @@ import React, { useState } from "react";
 
 import { AboutData } from "../Data/About";
 import { SideBarElements } from "../Data/Sidebar";
+import { useToast } from "@chakra-ui/toast";
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const toast = useToast();
+
+  const handleRouting = (completed) => {
+    if (completed) {
+      console.log("we're gonna navigate buddies");
+    } else {
+      toast({
+        title: "This page is still on work",
+        description: "We count on your patience until it is accomplished",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+    }
+  };
+
   return (
     <div
       className="flex flex-col bg-grey justify-center items-center"
@@ -20,7 +38,6 @@ const About = () => {
                 }`}
                 onClick={(index) => {
                   setCurrentIndex(element.index);
-                  console.log(currentIndex);
                 }}
               >
                 {element.label}
@@ -52,7 +69,10 @@ const About = () => {
                 </div>
               </div>
             ))}
-            <button className="px-5 py-3 hover:text-brown cursor-pointer text-red border border-red hover:border-brown">
+            <button
+              className="px-5 py-3 hover:text-brown cursor-pointer text-red border border-red hover:border-brown"
+              onClick={() => handleRouting(AboutData[currentIndex].completed)}
+            >
               Learn more
             </button>
           </div>

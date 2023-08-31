@@ -16,7 +16,7 @@ export const AboutData = [
     completed: false,
   },
   {
-    label: "Position",
+    label: "Positions",
     value: "experience",
     index: 1,
     desc: [
