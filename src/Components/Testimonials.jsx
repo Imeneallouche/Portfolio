@@ -1,21 +1,23 @@
 import React from "react";
 import { testimonialsInfo } from "../Data/TestimonialsInfo";
 import OneTestimonial from "./OneTestimonial";
+import POPUPtestimonial from "./POPUPtestimonial";
+import { SideBarElements } from "../Data/Sidebar";
 
 function Testimonials() {
   return (
-    <div className={`bg-dark-grey w-screen`}>
+    <div className={`bg-dark-grey w-screen`} id={SideBarElements[4].id}>
       <div className="m-36">
         <h1 className=" text-base text-brown">What clients say</h1>
         <h2 className="text-4xl font-bold text-light-brown mb-10">
           Testimonials
         </h2>
         <div className="flex justify-end  ">
-          <button className="border border-light-brown px-7 py-4 hover:bg-light-brown">
+          <button className="border border-light-brown px-7 py-4 hover:bg-light-brown text-white">
             {" "}
             {"<-"}{" "}
           </button>
-          <button className="border border-light-brown px-7 py-4 hover:bg-light-brown">
+          <button className="border border-light-brown px-7 py-4 hover:bg-light-brown text-white">
             {" "}
             {"->"}
           </button>
@@ -46,9 +48,7 @@ function Testimonials() {
         </div>
 
         <div className="flex justify-end">
-          <button className="border px-8 py-2 text-light-brown border-light-brown hover:text-brown hover:border-brown">
-            + add testimonial
-          </button>
+          <POPUPtestimonial />
         </div>
       </div>
     </div>

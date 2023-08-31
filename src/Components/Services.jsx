@@ -1,9 +1,10 @@
 import React from "react";
 import { serviceInfo } from "../Data/Services";
+import { SideBarElements } from "../Data/Sidebar";
 
 function Services() {
   return (
-    <div className="bg-grey w-screen">
+    <div className="bg-grey w-screen" id={SideBarElements[3].id}>
       <div className="m-36">
         <h1 className=" text-base text-brown">What Am I providing</h1>
         <h2 className="text-4xl font-bold text-light-brown mb-10">
@@ -11,24 +12,26 @@ function Services() {
         </h2>
 
         <div
-          className={`flex mt-5 w-full ${
+          className={`flex ${
             serviceInfo.length
-              ? "flex-wrap space-x-5"
+              ? "flex-wrap justify-between"
               : "justify-center items-center"
           }`}
         >
           {serviceInfo.length ? (
             serviceInfo.map((testimonial, index) => (
-              <div className="flex flex-col h-64 w-96 items-center border border-light-brown space-y-10 p-3 rounded-md">
-                <div className=" px-5 py-3 rounded-full  bg-light-brown flex justify-center items-center">
+              <div className="flex flex-col h-full w-96 items-center border border-light-brown space-y-3 p-3 rounded-md my-5 mr-5">
+                <div className="flex justify-center items-center">
                   <img
                     src={require(`../Assets/Services/${testimonial.img}.png`)}
                     alt=""
-                    className="w-10 relative"
+                    className="w-16"
                   />
                 </div>
                 <div className="mx-5 space-y-5">
-                  <h1 className="text-center text-light-grey">{testimonial.title}</h1>
+                  <h1 className="text-center text-xl text-light-brown">
+                    {testimonial.title}
+                  </h1>
                   <p className="text-light-grey"> {testimonial.text} </p>
                 </div>
               </div>

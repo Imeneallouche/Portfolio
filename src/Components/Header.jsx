@@ -1,10 +1,11 @@
 import React from "react";
 import SideBar from "./SideBar";
 import { HeaderInfos } from "../Data/HeaderInfos";
+import { SideBarElements } from "../Data/Sidebar";
 
 function Header() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col" id={SideBarElements[0].id}>
       <SideBar />
       <div className="grow flex">
         <div className="flex-1 flex flex-col justify-center items-center pl-36">
@@ -12,7 +13,10 @@ function Header() {
             <h1 className="text-light-grey my-3 text-base">
               {HeaderInfos.salutation}
             </h1>
-            <h2 className="text-5xl font-bold my-5"> {HeaderInfos.name}</h2>
+            <h2 className="text-5xl font-bold my-5 text-white">
+              {" "}
+              {HeaderInfos.name}
+            </h2>
             <h3 className="my-3 text-light-grey text-lg">
               {HeaderInfos.occupation}
             </h3>

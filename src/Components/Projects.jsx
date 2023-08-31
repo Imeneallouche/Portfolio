@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import OneProject from "./OneProject";
 import { ProjectsInfo } from "../Data/ProjectsInfo";
+import { SideBarElements } from "../Data/Sidebar";
 
 function Projects() {
   const containerRef = useRef();
@@ -17,7 +18,7 @@ function Projects() {
     scrollContainer(30); // Scroll right by 30 pixels
   };
   return (
-    <div className="bg-dark-grey w-screen">
+    <div className="bg-dark-grey w-screen" id={SideBarElements[2].id}>
       <div className="m-36">
         <h1 className=" text-base text-brown">What have I been working on</h1>
         <h2 className="text-4xl font-bold text-light-brown mb-10">
@@ -26,14 +27,14 @@ function Projects() {
         <div className="flex justify-end  ">
           <button
             onClick={SwipeLeft}
-            className="border border-light-brown px-7 py-4 hover:bg-light-brown"
+            className="border border-light-brown px-7 py-4 hover:bg-light-brown text-white"
           >
             {" "}
             {"<-"}{" "}
           </button>
           <button
             onClick={SwipeRight}
-            className="border border-light-brown px-7 py-4 hover:bg-light-brown"
+            className="border border-light-brown px-7 py-4 hover:bg-light-brown text-white"
           >
             {" "}
             {"->"}

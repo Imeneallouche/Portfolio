@@ -1,16 +1,17 @@
 import React from "react";
 import { ContactInfo } from "../Data/Contact";
+import { SideBarElements } from "../Data/Sidebar";
 
 function Contact() {
   return (
-    <div className="bg-grey">
+    <div className="bg-grey" id={SideBarElements[5].id}>
       <div className="m-36">
         <h1 className=" text-base text-brown">social media</h1>
         <h2 className="text-4xl font-bold text-light-brown mb-10">
           Contact Me
         </h2>
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-between">
           {" "}
           {ContactInfo.map((contact, index) => (
             <div
@@ -20,7 +21,7 @@ function Contact() {
               }}
             >
               <div className="flex flex-col">
-                <h1 className="font-semibold text-xl">
+                <h1 className="font-semibold text-xl text-white ">
                   {" "}
                   {contact.socialmedia}{" "}
                 </h1>
