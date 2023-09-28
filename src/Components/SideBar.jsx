@@ -6,10 +6,8 @@ import { Link } from "react-scroll";
 function SideBar() {
   const toast = useToast();
 
-  const handleRouting = (completed, link) => {
-    if (completed) {
-      window.open(link, "_blank");
-    } else {
+  const handleRouting = (completed) => {
+    if (!completed) {
       toast({
         title: "This page is still on work",
         description:
@@ -39,7 +37,7 @@ function SideBar() {
                 ? "text-red border border-red hover:border-brown"
                 : "text-light-grey"
             }`}
-            onClick={() => handleRouting(element.completed, null)}
+            onClick={() => handleRouting(element.completed)}
           >
             <Link to={element.id} spy={true} smooth={true} duration={250}>
               {element.name}
