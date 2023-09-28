@@ -1,8 +1,26 @@
 import React from "react";
 import { SideBarElements } from "../Data/Sidebar";
+import { useToast } from "@chakra-ui/toast";
 
 import { Link } from "react-scroll";
 function SideBar() {
+  const toast = useToast();
+
+  const handleRouting = (completed, link) => {
+    if (completed) {
+      window.open(link, "_blank");
+    } else {
+      toast({
+        title: "This page is still on work",
+        description:
+          "For now, you can hire me by sending an email in the contact section",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+    }
+  };
   return (
     <div className="flex justify-between items-center px-10">
       <div className="pr-20">
@@ -21,6 +39,7 @@ function SideBar() {
                 ? "text-red border border-red hover:border-brown"
                 : "text-light-grey"
             }`}
+            onClick={() => handleRouting(element.completed, null)}
           >
             <Link to={element.id} spy={true} smooth={true} duration={250}>
               {element.name}

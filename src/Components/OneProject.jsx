@@ -41,7 +41,10 @@ const OneProject = ({ ProjectIndex }) => {
         ))}
       </div>
       <div className="flex justify-center my-5">
-        <button className="border px-12 py-5 text-light-brown mr-5 border-light-brown hover:text-brown hover:border-brown w-fit">
+        <button
+          className="border px-12 py-5 text-light-brown mr-5 border-light-brown hover:text-brown hover:border-brown w-fit"
+          onClick={() => window.open(ProjectsInfo[ProjectIndex].link, "_blank")}
+        >
           learn more
         </button>
       </div>

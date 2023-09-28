@@ -236,6 +236,9 @@ function Footer() {
               className="w-10 cursor-pointer"
               src={require(`../Assets/socialmedia/${socialmedia.socialmedia}.png`)}
               alt=""
+              onClick={() => {
+                window.open(socialmedia.link, "_blank");
+              }}
             />
           ))}
         </div>

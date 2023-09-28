@@ -1,9 +1,9 @@
 export const SideBarElements = [
-  { name: "Home", id: "home" },
-  { name: "About", id: "about" },
-  { name: "Projects", id: "projects" },
-  { name: "Services", id: "services" },
-  { name: "Testimonials", id: "testimonials" },
-  { name: "Contact", id: "contact" },
-  { name: "Hire me", id: "hireme", different: true },
+  { name: "Home", id: "home", completed: true },
+  { name: "About", id: "about", completed: true },
+  { name: "Projects", id: "projects", completed: true },
+  { name: "Services", id: "services", completed: true },
+  { name: "Testimonials", id: "testimonials", completed: true },
+  { name: "Contact", id: "contact", completed: true },
+  { name: "Hire me", id: "hireme", different: true, completed: false },
 ];

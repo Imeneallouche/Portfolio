@@ -14,24 +14,24 @@ export const ContactInfo = [
   {
     socialmedia: "LinkedIn",
     username: "Imène ALLOUCHE",
-    link: "",
+    link: "https://www.linkedin.com/in/imene-allouche-045b21226/",
   },
 
   {
-    socialmedia: "Twitter",
-    username: "Imenealch",
-    link: "",
+    socialmedia: "Discord",
+    username: "Im3ne#6939",
+    link: "https://discord.com/",
   },
 
   {
     socialmedia: "Email",
     username: "li_allouche@esi.dz",
-    link: "",
+    link: "https://mail.google.com/mail/u/0/#inbox",
   },
 
   {
     socialmedia: "GitHub",
     username: "imenealch",
-    link: "",
+    link: "https://github.com/Imeneallouche",
   },
 ];
