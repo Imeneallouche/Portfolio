@@ -31,6 +31,7 @@ function Contact() {
                 <img
                   src={require(`../Assets/socialmedia/${contact.socialmedia}.png`)}
                   alt=""
+                  className="w-12"
                 />
               </div>
             </div>

@@ -41,6 +41,19 @@ function Header() {
             <h4 className="text-lg text-light-grey py-3">
               {HeaderInfos.description}
             </h4>
+            <h5 className="text-lg text-light-grey py-3">
+              I cordially invite you to explore my{" "}
+              <a
+                className="text-light-brown hover:underline"
+                href="https://medium.com/@li_allouche"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Medium account
+              </a>
+              , where you'll discover my in-depth writeups on CTF challenges and
+              HTB machines.
+            </h5>
             <div className="flex my-5">
               <button
                 className="border px-12 py-5 text-red mr-5 border-red hover:text-brown hover:border-brown"
@@ -50,12 +63,7 @@ function Header() {
               </button>
               <button
                 className="bg-red text-white p-12 py-5 hover:bg-brown"
-                onClick={() =>
-                  handleRouting(
-                    true,
-                    "https://drive.google.com/file/d/1ZTls9-GPu_LjfnL1RQ9U4OZns2q1RDQ0/view?usp=sharing"
-                  )
-                }
+                onClick={() => handleRouting(true, HeaderInfos.CVlink)}
               >
                 Resume
               </button>

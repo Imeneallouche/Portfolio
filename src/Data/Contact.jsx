@@ -34,4 +34,9 @@ export const ContactInfo = [
     username: "imenealch",
     link: "https://github.com/Imeneallouche",
   },
+  {
+    socialmedia: "Medium",
+    username: "Imène ALLOUCHE",
+    link: "https://medium.com/@li_allouche",
+  },
 ];
