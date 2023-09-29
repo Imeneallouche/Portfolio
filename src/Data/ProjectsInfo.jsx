@@ -15,7 +15,7 @@ export const ProjectsInfo = [
     detail: "type: Desktop application",
     title: "Smart Time Planner",
     description:
-      "Platform offering a comprehensive solution for managing doctoral candidate registrations, research, and statistics simplifying the process from initial enrollment to graduation.",
+      "Application for task organization providing users with the ability to plan tasks with automated/manual adjustments. It integrates with your daily schedule, ensuring tasks fit into your free time",
     technologies: ["java", "javafx", "css"],
     link: "https://github.com/Imeneallouche/Smart-Time-Planner",
   },
