@@ -5,10 +5,10 @@ export const AboutData = [
     index: 0,
     desc: [
       "Full name :  : Imène ALLOUCHE",
-      "Age       :  : 20 years old",
-      "Education :  : 3rd year Student at Higher National School of Computer Science ESI (Algiers)",
+      "Age       :  : 21 years old",
+      "Education :  : 4th year Student at Higher National School of Computer Science ESI (Algiers)",
       "Work      :  : MERN stack Web developer freelancer",
-      "Position  :  : Shellmates Club Vice president and its ex communication manager",
+      "Position  :  : Web development inscructor at BrainerX",
       "Interests :  : CTF player and Cybersecurity enthusiast",
     ],
 
@@ -20,17 +20,17 @@ export const AboutData = [
     value: "experience",
     index: 1,
     desc: [
-      `2021-2022      :    Web developer at Shellmates Club and CSE Club - Part time - Hybrid`,
+      `2024-Currently      :    Technical Deparment Manager of Shellmates Club`,
 
-      `2021-currently :    Computer Science Student at ESI Algiers`,
+      `2024-2025           :    Penetration Tester Intern at Keystone Group`,
 
-      `2022-2023      :    Shellmates Club communication manager and a technical department member`,
+      `2023-2024           :    Cybersecurity Insctructor at Code Labs Academy`,
 
-      `2022-currently :    CTF player at ShellSec Team`,
+      `2023-2024           :    Shellmates Club Vice President`,
 
-      `2023-2024      :    Shellmates Club vice president - Part time - Hybrid`,
+      `2022-2023           :    Communication Department Manager  of Shellmates Club`,
 
-      `2023-currently :    Web developer freelancer - Part time - Remote`,
+      `2022-currently      :    CTF player at noreply team`,
     ],
     router: "",
     completed: false,
@@ -40,17 +40,17 @@ export const AboutData = [
     value: "rewards",
     index: 2,
     desc: [
-      `2021-2022      :    Web developer at Shellmates Club and CSE Club - Part time - Hybrid`,
+      `2024-Currently      :    Technical Deparment Manager of Shellmates Club`,
 
-      `2021-currently :    Computer Science Student at ESI Algiers`,
+      `2024-2025           :    Penetration Tester Intern at Keystone Group`,
 
-      `2022-2023      :    Shellmates Club communication manager and a technical department member`,
+      `2023-2024           :    Cybersecurity Insctructor at Code Labs Academy`,
 
-      `2022-currently :    CTF player at ShellSec Team`,
+      `2023-2024           :    Shellmates Club Vice President`,
 
-      `2023-2024      :    Shellmates Club vice president - Part time - Hybrid`,
+      `2022-2023           :    Communication Department Manager  of Shellmates Club`,
 
-      `2023-currently :    Web developer freelancer`,
+      `2022-currently      :    CTF player at noreply team`,
     ],
     router: "",
     completed: false,
@@ -60,17 +60,17 @@ export const AboutData = [
     value: "rewards",
     index: 3,
     desc: [
-      `2021-2022      :    Web developer at Shellmates Club and CSE Club - Part time - Hybrid`,
+      `2024-Currently      :    Technical Deparment Manager of Shellmates Club`,
 
-      `2021-currently :    Computer Science Student at ESI Algiers`,
+      `2024-2025           :    Penetration Tester Intern at Keystone Group`,
 
-      `2022-2023      :    Shellmates Club communication manager and a technical department member`,
+      `2023-2024           :    Cybersecurity Insctructor at Code Labs Academy`,
 
-      `2022-currently :    CTF player at ShellSec Team`,
+      `2023-2024           :    Shellmates Club Vice President`,
 
-      `2023-2024      :    Shellmates Club vice president - Part time - Hybrid`,
+      `2022-2023           :    Communication Department Manager  of Shellmates Club`,
 
-      `2023-currently :    Web developer freelancer`,
+      `2022-currently      :    CTF player at noreply team`,
     ],
     router: "",
     completed: false,
